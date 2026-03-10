@@ -15,6 +15,7 @@ import { siteConfig } from "@/config/site-config";
 import MobileSidebarClose from "./mobile-sidebar-close";
 import Link from "next/link";
 import Credits from "./credits";
+import Upgrade from "./upgrade";
 
 export async function AppSidebar() {
   return (
@@ -42,6 +43,7 @@ export async function AppSidebar() {
       <SidebarFooter className="bg-muted/30 border-t py-4">
         <div className="flex w-full mb-3 items-center justify-center gap-2 text-xs">
           <Credits />
+          <Upgrade />
         </div>
         <UserButton />
       </SidebarFooter>
