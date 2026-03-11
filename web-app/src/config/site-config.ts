@@ -5,7 +5,7 @@ interface SiteProps {
 }
 
 export const siteConfig: SiteProps = {
-  title: "Templates App",
-  description: "My template store",
+  title: "Image Generator",
+  description: "Generate images with AI with the best AI models",
   panelPath: "/dashboard",
 };
