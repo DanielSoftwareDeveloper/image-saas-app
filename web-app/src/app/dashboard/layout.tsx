@@ -31,9 +31,7 @@ export default async function DashboardLaout({
           </div>
           <ModeToggle />
         </header>
-        <main className="flex-1 px-4 md:px-6 lg:px-8 py-4 lg:py-6">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
       </SidebarInset>
     </SidebarProvider>
   );
