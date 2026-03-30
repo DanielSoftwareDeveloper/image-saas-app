@@ -1,6 +1,5 @@
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
-import prisma from "@/lib/db";
 
 import { Resend } from "resend";
 import ForgotPasswordEmail from "@/components/emails/reset-password-email";
@@ -8,8 +7,9 @@ import VerifyEmail from "@/components/emails/verify-email";
 import { env } from "@/env";
 import { polar, checkout, portal, webhooks } from "@polar-sh/better-auth";
 import { Polar } from "@polar-sh/sdk";
-import db from "@/lib/db";
+
 import { siteConfig } from "@/config/site-config";
+import db from "./db";
 
 const resend = new Resend(env.RESEND_API_KEY);
 
@@ -19,7 +19,7 @@ const polarClient = new Polar({
 });
 
 export const auth = betterAuth({
-  database: prismaAdapter(prisma, {
+  database: prismaAdapter(db, {
     provider: "postgresql",
   }),
   secret: env.BETTER_AUTH_SECRET,
