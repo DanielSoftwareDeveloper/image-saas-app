@@ -6,6 +6,10 @@ interface NavbarRouteProps {
 }
 
 function NavbarRoute({ label, path }: NavbarRouteProps) {
-  return <Link href={path}>{label}</Link>;
+  return (
+    <Link href={path} className="text-sm text-foreground/80">
+      {label}
+    </Link>
+  );
 }
 export default NavbarRoute;

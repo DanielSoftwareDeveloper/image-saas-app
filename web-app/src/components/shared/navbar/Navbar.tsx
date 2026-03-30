@@ -3,7 +3,6 @@
 import MainWrapper from "../ui/MainWrapper";
 import Logo from "../ui/Logo";
 import NavbarRoutes from "./NavbarRoutes";
-import Sidebar from "./Sidebar";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { authClient } from "@/lib/auth-client";
@@ -19,18 +18,21 @@ function Navbar() {
   return (
     <header
       className={cn(
-        "bg-card sticky top-0 z-40 h-16 border-b transition-all duration-200 md:h-20",
-        isScrolled && "h-14 border-b md:h-16"
+        "sticky top-2 z-40 transition-all duration-200 h-18",
+        isScrolled &&
+          "top-0 border-b border-opacity-50 h-16 bg-card/80 backdrop-blur-sm",
       )}
     >
       <MainWrapper className="flex h-full items-center justify-between">
-        <div className="flex items-center gap-x-12">
+        <div className="flex flex-1 gap-x-12">
           <Logo />
+        </div>
+        <div className="flex flex-1 justify-center">
           <NavbarRoutes />
         </div>
-        <div className="flex items-center gap-x-4">
+        <div className="flex flex-1 justify-end items-center gap-x-4">
           {/*<ModeToggle />*/}
-          <Sidebar />
+          <ModeToggle />
           <div className="hidden items-center gap-x-4 md:flex">
             {isPending ? null : session ? (
               <>
@@ -64,7 +66,6 @@ function Navbar() {
               </>
             )}
           </div>
-          <ModeToggle />
         </div>
       </MainWrapper>
     </header>

@@ -7,7 +7,14 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { siteConfig } from "@/config/site-config";
 import { requireAuth } from "@/lib/auth-utils";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.title} - Dashboard`,
+  description: `Welcome to the ${siteConfig.title} dashboard. Here you can manage your account, view analytics, and access all the features of our platform. Stay organized and in control with our user-friendly dashboard designed to enhance your experience.`,
+};
 
 export default async function DashboardLaout({
   children,

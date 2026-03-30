@@ -4,6 +4,7 @@ import MainWrapper from "../ui/MainWrapper";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { siteConfig } from "@/config/site-config";
+import { navbarRoutes } from "../navbar/navbar-routes";
 
 function Footer() {
   return (
@@ -12,32 +13,19 @@ function Footer() {
         <div className="mb-16 grid grid-cols-2 gap-10 lg:grid-cols-3">
           <div className="col-span-4 md:col-span-1">
             <Logo className="mb-4" />
-            <p className="text-sm">AI-powered music creation for everyone.</p>
+            <p className="text-sm">{siteConfig.description}</p>
           </div>
           <div className="">
             <h4 className="font-semibold">Plataforma</h4>
             <Separator className="my-4" />
             <ul className="space-y-1">
-              <li>
-                <Link href="/#demo" className="text-sm">
-                  Demo
-                </Link>
-              </li>
-              <li>
-                <Link href="/#about" className="text-sm">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/#about" className="text-sm">
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="/#price" className="text-sm">
-                  Price
-                </Link>
-              </li>
+              {navbarRoutes.map((route) => (
+                <li key={route.id}>
+                  <Link href={route.path} className="text-sm">
+                    {route.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="">

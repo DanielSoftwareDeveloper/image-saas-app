@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site-config";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -11,10 +12,10 @@ function Logo({ className }: Props) {
       href="/#banner"
       className={cn(
         "text-primary block text-xl font-bold uppercase lg:text-2xl",
-        className
+        className,
       )}
     >
-      MochiDevs
+      {siteConfig.title}
     </Link>
   );
 }

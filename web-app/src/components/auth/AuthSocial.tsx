@@ -25,7 +25,7 @@ function AuthSocial() {
         onError: () => {
           setPending(false);
         },
-      }
+      },
     );
   };
 
@@ -42,18 +42,6 @@ function AuthSocial() {
       >
         <FcGoogle className="size-5" />
         <span className="">Google</span>
-      </Button>
-      <Button
-        type="button"
-        variant="outline"
-        size="lg"
-        className="flex-1 cursor-pointer"
-        disabled={pending}
-        aria-label="Login with Github"
-        onClick={() => onSocial("github")}
-      >
-        <IoLogoGithub className="size-5" />
-        <span className="">Github</span>
       </Button>
     </div>
   );

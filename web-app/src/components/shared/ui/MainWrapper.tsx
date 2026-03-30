@@ -7,7 +7,7 @@ interface MainWrapperProps {
 
 function MainWrapper({ className, children }: MainWrapperProps) {
   return (
-    <div className={cn("mx-auto w-[90%] max-w-[1250px]", className)}>
+    <div className={cn("mx-auto w-[94%] max-w-312.5", className)}>
       {children}
     </div>
   );

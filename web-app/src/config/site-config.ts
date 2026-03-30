@@ -5,7 +5,7 @@ interface SiteProps {
 }
 
 export const siteConfig: SiteProps = {
-  title: "Image Generator",
+  title: "Genx-AI",
   description: "Generate images with AI with the best AI models",
   panelPath: "/dashboard",
 };

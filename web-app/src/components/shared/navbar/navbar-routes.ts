@@ -1,22 +1,27 @@
 export const navbarRoutes = [
   {
     id: 1,
-    label: "Home",
-    path: "/",
+    label: "Demo",
+    path: "/#demo",
   },
   {
     id: 2,
-    label: "Store",
-    path: "/store",
+    label: "Features",
+    path: "/#features",
   },
   {
     id: 3,
-    label: "Services",
-    path: "/services",
+    label: "About",
+    path: "/#about",
   },
   {
     id: 4,
-    label: "Blog",
-    path: "/blog",
+    label: "Pricing",
+    path: "/#pricing",
+  },
+  {
+    id: 4,
+    label: "FAQ",
+    path: "/#faq",
   },
 ];

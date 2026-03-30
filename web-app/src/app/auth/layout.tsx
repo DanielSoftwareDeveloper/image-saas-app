@@ -3,6 +3,12 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site-config";
 import { requireUnauth } from "@/lib/auth-utils";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.title} - Auth`,
+  description: `Welcome to the ${siteConfig.title} authentication page. Here you can register or log in to access your account and manage your preferences.`,
+};
 
 export default async function AuthLayout({
   children,
